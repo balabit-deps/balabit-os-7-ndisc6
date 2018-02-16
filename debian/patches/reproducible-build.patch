@@ -1,0 +1,53 @@
+From: Santiago Vila <sanvila@debian.org>
+Subject: We should not really care about the build date or the build host
+
+--- a/src/addrinfo.c
++++ b/src/addrinfo.c
+@@ -148,7 +148,6 @@
+ static int version (void)
+ {
+         printf (_("addrinfo %s (%s)\n"), VERSION, "$Rev$");
+-	printf (_(" built %s on %s\n"), __DATE__, PACKAGE_BUILD_HOSTNAME);
+         printf (_("Configured with: %s\n"), PACKAGE_CONFIGURE_INVOCATION);
+         puts (_("Written by Remi Denis-Courmont\n"));
+ 
+--- a/src/ndisc.c
++++ b/src/ndisc.c
+@@ -887,7 +887,6 @@
+ {
+ 	printf (_(
+ "ndisc6: IPv6 Neighbor/Router Discovery userland tool %s (%s)\n"), VERSION, "$Rev$");
+-	printf (_(" built %s on %s\n"), __DATE__, PACKAGE_BUILD_HOSTNAME);
+ 
+ 	printf (_("Configured with: %s\n"), PACKAGE_CONFIGURE_INVOCATION);
+ 	puts (_("Written by Remi Denis-Courmont\n"));
+--- a/src/tcpspray.c
++++ b/src/tcpspray.c
+@@ -302,7 +302,6 @@
+ {
+ 	printf (_(
+ "tcpspray6: TCP/IP bandwidth tester %s (%s)\n"), VERSION, "$Rev$");
+-	printf (_(" built %s on %s\n"), __DATE__, PACKAGE_BUILD_HOSTNAME);
+ 	printf (_("Configured with: %s\n"), PACKAGE_CONFIGURE_INVOCATION);
+ 	puts (_("Written by Remi Denis-Courmont\n"));
+ 
+--- a/src/traceroute.c
++++ b/src/traceroute.c
+@@ -1250,7 +1250,6 @@
+ {
+ 	printf (_(
+ "traceroute6: TCP & UDP IPv6 traceroute tool %s (%s)\n"), VERSION, "$Rev$");
+-	printf (_(" built %s on %s\n"), __DATE__, PACKAGE_BUILD_HOSTNAME);
+ 	printf (_("Configured with: %s\n"), PACKAGE_CONFIGURE_INVOCATION);
+ 	puts (_("Written by Remi Denis-Courmont\n"));
+ 
+--- a/rdnssd/rdnssd.c
++++ b/rdnssd/rdnssd.c
+@@ -738,7 +738,6 @@
+ {
+ 	printf (_("rdnssd: IPv6 Recursive DNS Server discovery Daemon %s (%s)\n"),
+ 	        VERSION, "$Rev$");
+-	printf (_(" built %s on %s\n"), __DATE__, PACKAGE_BUILD_HOSTNAME);
+ 	printf (_("Configured with: %s\n"), PACKAGE_CONFIGURE_INVOCATION);
+ 	puts (_("Written by Pierre Ynard and Remi Denis-Courmont\n"));
+ 

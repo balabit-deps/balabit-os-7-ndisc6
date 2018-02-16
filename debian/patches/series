@@ -1,0 +1,3 @@
+rdnssd-hook-drop-dnssl.patch
+resolvconf-rdnssd-hook.patch
+reproducible-build.patch
